@@ -26,3 +26,16 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 # projeto-cotec
+
+json-server --watch db.json
+
+  \{^_^}/ hi!
+
+  Loading db.json
+  Done
+
+  Resources
+  http://localhost:3000/beneficiarios
+
+  Home
+  http://localhost:3000
