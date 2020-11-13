@@ -1,0 +1,6 @@
+{
+  "beneficiarios": [
+    { "id": 1, "nome": "Fernando Ellery", "cpf": "875.149.909-68", "orgao": "SEFAZ", "matricula": "921338752" },
+    { "id": 2, "nome": "Ruan Ellery", "cpf": "987.111.540-71", "orgao": "SEFAZ", "matricula": "81217326030" }
+  ]
+}
