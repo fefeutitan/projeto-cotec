@@ -4,8 +4,8 @@
       <h4>Beneficiarios</h4>
     </div>
     <div class="float-right">
-      <button type="button" class="btn btn-primary" [routerLink]="['novo']">Novo beneficiario</button>
-      <button type="button" class="btn btn-secondary" (click)="onRefresh()">Atualizar</button>
+      <!-- <button type="button" class="btn btn-primary" [routerLink]="['novo']">Novo beneficiario</button> -->
+      <!-- <button type="button" class="btn btn-secondary" (click)="onRefresh()">Atualizar</button> -->
     </div>
   </div>
   <div class="card-body">
@@ -13,16 +13,17 @@
       <!-- *ngIf="(beneficiarios$ | async) as beneficiarios; else loading" -->
       <thead>
         <tr>
-          <th>#</th>
-          <th>Beneficiarios</th>
-          <th></th>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>Orgao</th>
+          <th>Matricula</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let beneficiario of beneficiarios">
-          <td>{{ beneficiario.id }}</td>
           <td>{{ beneficiario.nome }}</td>
           <td>{{ beneficiario.cpf }}</td>
+          <td>{{ beneficiario.orgao }}</td>
           <td>{{ beneficiario.matricula }}</td>
           <td>
             <span class="float-right">

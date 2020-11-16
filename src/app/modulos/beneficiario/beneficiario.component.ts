@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Beneficiario } from '../beneficiario';
+import { Beneficiario } from './beneficiario';
 import { BeneficiarioService } from '../beneficiario.service';
 
 @Component({
@@ -28,6 +28,7 @@ export class BeneficiarioComponent implements OnInit {
   onDelete(){
 
   };
+
   onConfirmDelete(){
 
   };
