@@ -36,11 +36,11 @@ export class BeneficiarioFormComponent implements OnInit {
     console.log(this.form.value);
     if (this.form.valid) {
       console.log('submit');
-    //   this.service.create(this.form.value).subscribe(
-    //     success => console.log('sucesso'),
-    //     error => console.error(error),
-    //     () => console.log('request completo')
-    //   );
+      this.service.create(this.form.value).subscribe(
+        success => console.log('sucesso'),
+        error => console.error(error),
+        () => console.log('request completo')
+      );
      }
 
   }
