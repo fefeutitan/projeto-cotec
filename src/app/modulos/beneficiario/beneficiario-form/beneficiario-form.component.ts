@@ -24,30 +24,27 @@ export class BeneficiarioFormComponent implements OnInit {
     });
   }
 
-  // tslint:disable-next-line: typedef
   hasError(field: string) {
 
     return this.form.get(field).errors;
 
   }
 
-  // tslint:disable-next-line: typedef
   onSubmit() {
 
     this.submitted = true;
     console.log(this.form.value);
     if (this.form.valid) {
       console.log('submit');
-      this.service.create(this.form.value).subscribe(
-        success => console.log('sucesso'),
-        error => console.error(error),
-        () => console.log('request completo')
-      );
-    }
+    //   this.service.create(this.form.value).subscribe(
+    //     success => console.log('sucesso'),
+    //     error => console.error(error),
+    //     () => console.log('request completo')
+    //   );
+     }
 
   }
 
-  // tslint:disable-next-line: typedef
   onCancel() {
 
     this.submitted = false;

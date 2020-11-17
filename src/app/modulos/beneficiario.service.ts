@@ -1,7 +1,7 @@
 import { Injectable, ɵConsole } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Beneficiario } from './beneficiario/beneficiario';
-import { tap } from 'rxjs/operators';
+import { take, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +12,17 @@ export class BeneficiarioService {
 
   constructor(private http: HttpClient) { }
 
-  // tslint:disable-next-line: typedef
+
   list() {
     return this.http.get<Beneficiario[]>(this.API)
     .pipe(
       tap(console.log)
     );
+  }
+
+  create(beneficiario) {
+
+    return this.http.post(this.API, beneficiario).pipe(take(1));
+
   }
 }

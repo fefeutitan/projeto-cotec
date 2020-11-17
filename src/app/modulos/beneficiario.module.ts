@@ -1,9 +1,11 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { BeneficiarioRoutingModule } from './beneficiario-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BeneficiarioComponent } from './beneficiario/beneficiario.component';
 import { ProcessoComponent } from './processo/processo.component';
 import { MovimentacaoComponent } from './movimentacao/movimentacao.component';
+import { BeneficiarioFormComponent } from './beneficiario/beneficiario-form/beneficiario-form.component';
 
 
 
@@ -11,10 +13,12 @@ import { MovimentacaoComponent } from './movimentacao/movimentacao.component';
   declarations:
   [BeneficiarioComponent,
     ProcessoComponent,
-    MovimentacaoComponent],
+    MovimentacaoComponent,
+    BeneficiarioFormComponent],
   imports: [
     CommonModule,
-    BeneficiarioRoutingModule
+    BeneficiarioRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class BeneficiarioModule { }
