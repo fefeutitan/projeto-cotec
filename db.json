@@ -1,9 +1,34 @@
 {
   "beneficiarios": [
-    { "id": 1, "nome": "Fernando Ellery", "cpf": "875.149.909-68", "orgao": "SEFAZ", "matricula": "921338752" },
-    { "id": 2, "nome": "Ruan Ellery", "cpf": "987.111.540-71", "orgao": "SEFAZ", "matricula": "81217326030" }
+    {
+      "id": 1,
+      "nome": "Fernando Ellery",
+      "cpf": "875.149.909-68",
+      "orgao": "SEFAZ",
+      "matricula": "921338752"
+    },
+    {
+      "id": 2,
+      "nome": "Ruan Ellery",
+      "cpf": "987.111.540-71",
+      "orgao": "SEFAZ",
+      "matricula": "81217326030"
+    },
+    {
+      "nome": "Luiza Ellery",
+      "cpf": "96238149094",
+      "orgao": "SEDUC",
+      "matricula": "10735138079",
+      "id": 3
+    }
   ],
   "movimentacoes": [
-    { "id": 1, "dt_tramitacao": "2017-12-28 00:00:00.0", "origem": "Setorial Servidor", "destino": "Cprev Gestor", "usuário": "usuario" }
+    {
+      "id": 1,
+      "dt_tramitacao": "2017-12-28 00:00:00.0",
+      "origem": "Setorial Servidor",
+      "destino": "Cprev Gestor",
+      "usuário": "usuario"
+    }
   ]
 }
