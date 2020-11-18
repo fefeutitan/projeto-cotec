@@ -6,10 +6,12 @@ import { BeneficiarioComponent } from './beneficiario/beneficiario.component';
 import { BeneficiarioFormComponent } from './beneficiario/beneficiario-form/beneficiario-form.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 
 const routes: Routes = [
   { path: '', component: BeneficiarioComponent },
-  { path: 'processo', component: ProcessoComponent },
+  { path: 'processo', component: UploadFileComponent },
+  // { path: 'upload', component: UploadFileComponent },
   { path: 'movimentacao', component: MovimentacaoComponent },
   { path: 'novo', component: BeneficiarioFormComponent },
   { path: 'editar/:id', component: BeneficiarioFormComponent },

@@ -1,21 +1,21 @@
-import { ProcessoUploadService } from './../processo-upload.service';
 import { Component, OnInit } from '@angular/core';
+import { UploadFileService } from '../upload-file.service';
 import { take } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 import { HttpEventType, HttpEvent } from '@angular/common/http';
-import { filterResponse, uploadProgress } from 'src/app/shared/rxjs-operators';
+import { filterResponse, uploadProgress } from '../../shared/rxjs-operators';
 
 @Component({
-  selector: 'app-processo',
-  templateUrl: './processo.component.html',
-  styleUrls: ['./processo.component.scss'],
+  selector: 'app-upload-file',
+  templateUrl: './upload-file.component.html',
+  styleUrls: ['./upload-file.component.scss']
 })
-export class ProcessoComponent implements OnInit {
+export class UploadFileComponent implements OnInit {
 
   files: Set<File>;
   progress = 0;
 
-  constructor(private service: ProcessoUploadService) {}
+  constructor(private service: UploadFileService) { }
 
   ngOnInit() { }
 
@@ -33,20 +33,22 @@ export class ProcessoComponent implements OnInit {
     }
     document.getElementById('customFileLabel').innerHTML = fileNames.join(', ');
 
-    this.progress = 0;
+    // this.progress = 0;
   }
 
   onUpload() {
     if (this.files && this.files.size > 0) {
-      this.service.upload(this.files, environment.BASE_URL + '/upload')
-        .pipe(
-          uploadProgress(progress => {
-            console.log(progress);
-            this.progress = progress;
-          }),
-          filterResponse()
-        )
-        .subscribe(response => console.log('Upload Concluído'));
+      this.service.upload(this.files, 'http://localhost:8000/upload')
+      .subscribe(response => console.log('Upload Concluído'));
+      // this.service.upload(this.files, environment.BASE_URL + '/upload')
+        // .pipe(
+        //   uploadProgress(progress => {
+        //     console.log(progress);
+        //     this.progress = progress;
+        //   }),
+        //   filterResponse()
+        // )
+        // .subscribe(response => console.log('Upload Concluído'));
         // .subscribe((event: HttpEvent<Object>) => {
         //   // console.log(event);
         //   if (event.type === HttpEventType.Response) {

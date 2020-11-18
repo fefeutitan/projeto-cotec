@@ -6,6 +6,7 @@ import { BeneficiarioComponent } from './beneficiario/beneficiario.component';
 import { ProcessoComponent } from './processo/processo.component';
 import { MovimentacaoComponent } from './movimentacao/movimentacao.component';
 import { BeneficiarioFormComponent } from './beneficiario/beneficiario-form/beneficiario-form.component';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 
 
 
@@ -14,7 +15,8 @@ import { BeneficiarioFormComponent } from './beneficiario/beneficiario-form/bene
   [BeneficiarioComponent,
     ProcessoComponent,
     MovimentacaoComponent,
-    BeneficiarioFormComponent],
+    BeneficiarioFormComponent,
+    UploadFileComponent],
   imports: [
     CommonModule,
     BeneficiarioRoutingModule,
