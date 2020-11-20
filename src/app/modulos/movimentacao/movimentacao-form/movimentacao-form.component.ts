@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AlertModalService } from 'src/app/shared/alert-modal.service';
 import { Location } from '@angular/common';
-import { MovimentacaoService } from '../../service/movimentacao.service';
+import { MovimentacaoService } from '../../movimentacao.service';
 
 @Component({
   selector: 'app-movimentacao-form',

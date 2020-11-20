@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { tap } from 'rxjs/operators';
+import { take, tap } from 'rxjs/operators';
 import { Movimentacao } from './movimentacao/movimentacao';
 
 @Injectable({
@@ -17,5 +17,11 @@ export class MovimentacaoService {
     .pipe(
       tap(console.log)
     );
+  }
+
+  create(beneficiario) {
+
+    return this.http.post(this.API, beneficiario).pipe(take(1));
+
   }
 }
