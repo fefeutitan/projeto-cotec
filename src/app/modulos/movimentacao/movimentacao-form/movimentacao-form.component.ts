@@ -40,7 +40,7 @@ export class MovimentacaoFormComponent implements OnInit {
       console.log('submit');
       this.service.create(this.form.value).subscribe(
         (success) => {
-          this.modal.showAlertSuccess('Crido com sucesso!');
+          this.modal.showAlertSuccess('Criado com sucesso!');
           this.location.back();
         },
         (error) => this.modal.showAlertDanger('Erro Ao criar beneficiário!'),
