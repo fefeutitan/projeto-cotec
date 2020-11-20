@@ -27,12 +27,16 @@
           <td>{{ beneficiario.matricula }}</td>
           <td>
             <span class="float-right">
-              <button class="btn btn-outline-warning mb-1 btn-sm" routerLink="upload">
-                Upload
+              <button class="btn btn-outline-primary mb-1 btn-sm" routerLink="processoForm">
+                Novo Processo
               </button>
 
-              <button class="btn btn-outline-danger mb-1 btn-sm" (click)="onDelete(beneficiario)">
-                Remover
+              <button class="btn btn-outline-warning mb-1 btn-sm" routerLink="processoList">
+                Ver Processo
+              </button>
+
+              <button class="btn btn-outline-danger mb-1 btn-sm" routerLink="back">
+                Voltar
               </button>
             </span>
           </td>

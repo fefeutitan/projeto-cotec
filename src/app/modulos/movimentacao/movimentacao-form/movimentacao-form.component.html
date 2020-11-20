@@ -1,0 +1,63 @@
+<form class="needs-validation" novalidate [formGroup]="form">
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="Tramitacao">Tramitação</label>
+      <input
+        type="text"
+        class="form-control"
+        id="Tramitacao"
+        placeholder="Tramitação"
+        formControlName="Tramitacao"
+        [ngClass]="{ 'is-invalid': submitted && hasError('Tramitacao')}"
+      />
+      <div class="invalid-feedback" *ngIf="hasError('Tramitacao') && hasError('Tramitacao')['required']">Obrigatório!</div>
+   </div>
+
+    <div class="col-md-2 mb-3">
+      <label for="origem">Origem</label>
+      <input
+        type="text"
+        class="form-control"
+        id="origem"
+        placeholder="Origem"
+        formControlName="origem"
+        [ngClass]="{ 'is-invalid': submitted && hasError('origem')}"
+      />
+      <div class="invalid-feedback" *ngIf="hasError('origem') && hasError('origem')['required']">Obrigatório!</div>
+    </div>
+
+    <div class="col-md-2 mb-3">
+      <label for="destino">Destino</label>
+      <input
+        type="text"
+        class="form-control"
+        id="destino"
+        placeholder="Destino"
+        formControlName="destino"
+        [ngClass]="{ 'is-invalid': submitted && hasError('destino')}"
+      />
+      <div class="invalid-feedback" *ngIf="hasError('destino') && hasError('destino')['required']">Obrigatório!</div>
+    </div>
+
+    <div class="col-md-2 mb-3">
+      <label for="usuario">Usuário</label>
+      <input
+        type="text"
+        class="form-control"
+        id="usuario"
+        placeholder="Usuário"
+        value="Fernando"
+        readonly
+        formControlName="usuario"
+      />
+    </div>
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+      Salvar
+    </button>
+    <button type="button" class="btn btn-default" (click)="onCancel()">
+      Cancelar
+    </button>
+  </div>
+</form>

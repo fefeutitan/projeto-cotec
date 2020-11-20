@@ -1,1 +1,64 @@
-<p>movimentacao works!</p>
+<div class="card mt-3">
+  <div class="card-header">
+    <div class="float-left">
+      <h4>movimentações</h4>
+    </div>
+    <div class="float-right">
+      <button type="button" class="btn btn-primary" routerLink="movimentacaoForm">Nova movimentação</button>
+      <!-- <button type="button" class="btn btn-secondary" (click)="onRefresh()">Atualizar</button> -->
+    </div>
+  </div>
+  <div class="card-body">
+    <table class="table table-hover" >
+      <!-- *ngIf="(movimentacaos$ | async) as movimentacaos; else loading" -->
+      <thead>
+        <tr>
+          <th>Tramitacao</th>
+          <th>Origem</th>
+          <th>Destino</th>
+          <th>Usuário</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movimentacao of movimentacaos">
+          <td>{{ movimentacao.tramitacao }}</td>
+          <td>{{ movimentacao.origem }}</td>
+          <td>{{ movimentacao.destino }}</td>
+          <td>{{ movimentacao.usuario }}</td>
+          <td>
+            <span class="float-right">
+              <button class="btn btn-outline-danger mb-1 btn-sm" routerLink="back">
+                Voltar
+              </button>
+
+              <!-- <button class="btn btn-outline-warning mb-1 btn-sm" routerLink="processo">
+                Ver movimentação
+              </button> -->
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ng-template #loading>
+      <span>Carregando movimentacaos...</span>
+    </ng-template>
+
+    <!--ng-template #loadingError>
+      <div *ngIf="error$ | async; else loading" >
+        Erro ao carregar movimentacaos. Tente novamente mais tarde.
+      </div>
+      <ng-template #loading>
+          <span>Carregando movimentacaos...</span>
+      </ng-template>
+    </ng-template -->
+  </div>
+</div>
+
+<!-- <ng-template #deleteModal>
+  <div class="modal-body text-center">
+    <p>Tem certeza que deseja remover esse movimentacao?</p>
+    <button type="button" class="btn btn-default" (click)="onConfirmDelete()">Sim</button>
+    <button type="button" class="btn btn-primary" (click)="onDeclineDelete()">Nao</button>
+  </div>
+</ng-template> -->

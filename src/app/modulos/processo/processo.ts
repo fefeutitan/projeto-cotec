@@ -1,6 +1,8 @@
-import { Movimentacao } from '../movimentacao/movimentacao';
+import { Beneficiario } from '../beneficiario/beneficiario';
 
 export class Processo {
   id: number;
-  movimentacao = new Movimentacao();
+  arquivo: string;
+  tipo: string;
+  beneficiario = new Beneficiario();
 }

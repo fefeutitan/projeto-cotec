@@ -1,1 +1,68 @@
-<p>processo works!</p>
+<div class="card mt-3">
+  <div class="card-header">
+    <div class="float-left">
+      <h4>Processos</h4>
+    </div>
+    <div class="float-right">
+      <!-- <button type="button" class="btn btn-primary" routerLink="novo">Novo Processo</button> -->
+      <!-- <button type="button" class="btn btn-secondary" (click)="onRefresh()">Atualizar</button> -->
+    </div>
+  </div>
+  <div class="card-body">
+    <table class="table table-hover" >
+      <!-- *ngIf="(processos$ | async) as processos; else loading" -->
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Arquivo</th>
+          <!-- <th>Orgao</th>
+          <th>Matricula</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let processo of processos">
+          <td>{{ processo.tipo}}</td>
+          <td>{{ processo.arquivo }}</td>
+          <!-- <td>{{ processo.beneficiario }}</td>
+          <td>{{ processo.id }}</td> -->
+          <td>
+            <span class="float-right">
+              <button class="btn btn-outline-primary mb-1 btn-sm" routerLink="movimentacaoForm">
+                Nova movimentação
+              </button>
+
+              <button class="btn btn-outline-warning mb-1 btn-sm" routerLink="movimentacaoList">
+                Ver movimentação
+              </button>
+
+              <button class="btn btn-outline-danger mb-1 btn-sm" routerLink="back">
+                Voltar
+              </button>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ng-template #loading>
+      <span>Carregando processos...</span>
+    </ng-template>
+
+    <!--ng-template #loadingError>
+      <div *ngIf="error$ | async; else loading" >
+        Erro ao carregar processos. Tente novamente mais tarde.
+      </div>
+      <ng-template #loading>
+          <span>Carregando processos...</span>
+      </ng-template>
+    </ng-template -->
+  </div>
+</div>
+
+<!-- <ng-template #deleteModal>
+  <div class="modal-body text-center">
+    <p>Tem certeza que deseja remover esse processo?</p>
+    <button type="button" class="btn btn-default" (click)="onConfirmDelete()">Sim</button>
+    <button type="button" class="btn btn-primary" (click)="onDeclineDelete()">Nao</button>
+  </div>
+</ng-template> -->

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MovimentacaoService } from '../movimentacao.service';
+import { Movimentacao } from './movimentacao';
+
 
 @Component({
   selector: 'app-movimentacao',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovimentacaoComponent implements OnInit {
 
-  constructor() { }
+  movimentacaos: Movimentacao[];
 
-  ngOnInit(): void {
+  constructor(private service: MovimentacaoService) { }
+
+  ngOnInit() {
+    this.service.list().subscribe(dados => this.movimentacaos = dados);
   }
 
 }
+
