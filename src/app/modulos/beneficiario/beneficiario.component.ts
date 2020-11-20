@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Beneficiario } from './beneficiario';
 import { BeneficiarioService } from '../beneficiario.service';
+import { Beneficiario } from './beneficiario';
 
 @Component({
   selector: 'app-beneficiario',
